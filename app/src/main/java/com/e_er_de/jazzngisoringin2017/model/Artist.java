@@ -16,6 +16,8 @@ public class Artist {
     private String name;
     @SerializedName("type")
     private String type;
+    @SerializedName("recommender")
+    private String recommender;
 
     public int getId() {
         return id;
@@ -48,4 +50,13 @@ public class Artist {
     public void setType(String type) {
         this.type = type;
     }
+
+    public String getRecommender() {
+        return recommender;
+    }
+
+    public void setRecommender(String recommender) {
+        this.recommender = recommender;
+    }
+
 }

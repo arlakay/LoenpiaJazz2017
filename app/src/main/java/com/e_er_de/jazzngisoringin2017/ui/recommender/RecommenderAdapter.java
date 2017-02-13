@@ -1,4 +1,4 @@
-package com.e_er_de.jazzngisoringin2017.ui.artist;
+package com.e_er_de.jazzngisoringin2017.ui.recommender;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -18,14 +18,14 @@ import butterknife.ButterKnife;
 /**
  * Created by ILM on 8/1/2016.
  */
-public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.VersionViewHolder> {
+public class RecommenderAdapter extends RecyclerView.Adapter<RecommenderAdapter.VersionViewHolder> {
 
     private List<Artist> artistList;
     private int rowLayout;
     Context context;
     OnItemClickListener clickListener;
 
-    public ArtistAdapter(List<Artist> login, int rowLayout, Context context, OnItemClickListener listener) {
+    public RecommenderAdapter(List<Artist> login, int rowLayout, Context context, OnItemClickListener listener) {
         this.artistList = login;
         this.rowLayout = rowLayout;
         this.context = context;
@@ -105,8 +105,6 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.VersionVie
         @BindView(R.id.txt_hari_service)TextView titleRes;
         @BindView(R.id.txt_edc_sn)TextView descRes;
 
-        private String type;
-
         public VersionViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -114,15 +112,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.VersionVie
 
         public void bind(final Artist model, final OnItemClickListener listener) {
             titleRes.setText(model.getName());
-
-            type = model.getType();
-            if(type.equalsIgnoreCase("GS")){
-                type="Guest Star";
-            }else{
-                type="Talent";
-
-            }
-            descRes.setText(type);
+            descRes.setText("Share to Friends");
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

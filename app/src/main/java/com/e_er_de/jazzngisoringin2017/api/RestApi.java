@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RestApi {
 
-    public static final String BASE_URL = "http://ersarizkidimitri.ga/erd_jazz/index.php/api/";  //Debugging
+    public static final String BASE_URL = "http://ersarizkidimitri.ga/erd_jazz/api/";  //Debugging
 //    public static final String BASE_URL = "http://192.168.0.101/api/erd_jazz/index.php/api/";        //Local Debugging
 
     private static Retrofit retrofit = null;

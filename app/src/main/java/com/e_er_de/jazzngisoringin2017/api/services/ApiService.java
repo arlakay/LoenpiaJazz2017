@@ -24,4 +24,8 @@ public interface ApiService {
     @GET("schedule/getAllArtist")
     Call<ArtistResponse> getAllArtist(@Query("X-API-KEY") String api_key);
 
+    //Recommender -
+    @GET("schedule/getAllRecommender")
+    Call<ArtistResponse> getAllRecommender(@Query("X-API-KEY") String api_key);
+
 }
